@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coach IA Volley – Joueurs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="app-header">
+  <h1>Coach IA Volley</h1>
+  <nav class="top-nav">
+    <a href="index.html">🏠 Accueil</a>
+    <span> / </span>
+    <a href="teams.html">Équipes</a>
+    <span> / </span>
+    <span>Joueurs</span>
+    <button type="button" id="logout-btn" class="btn-link nav-right">
+      Se déconnecter
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Infos de l'équipe -->
+  <section class="card">
+    <h2>Équipe sélectionnée</h2>
+    <p id="team-info-full">
+      <!-- Exemple : "U17 Filles – Catégorie U17F – Niveau : Régional" -->
+    </p>
+    <div class="card-actions">
+      <a href="teams.html" class="btn-link">⬅ Retour aux équipes</a>
+      <a id="go-training-link" href="#" class="btn-link">
+        📋 Planifier une séance pour cette équipe
+      </a>
+    </div>
+  </section>
+
+  <!-- Liste des joueurs -->
+  <section class="card">
+    <h2>Joueurs de l'équipe</h2>
+    <div id="players-list">
+      <!--
+      <div class="player-item">
+        <h3>Léa Martin</h3>
+        <p>Poste : Libéro – Niveau global : 3/5</p>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- Ajout de joueur -->
+  <section class="card">
+    <h2>Ajouter un joueur</h2>
+    <form id="create-player-form">
+      <div class="form-group">
+        <label for="player-first-name">Prénom</label>
+        <input type="text" id="player-first-name" name="player-first-name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="player-last-name">Nom</label>
+        <input type="text" id="player-last-name" name="player-last-name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="player-position">Poste</label>
+        <input type="text" id="player-position" name="player-position"
+               placeholder="passeur, central, libéro..." />
+      </div>
+
+      <div class="form-group">
+        <label for="player-level">Niveau global (1 à 5)</label>
+        <input type="number" id="player-level" name="player-level" min="1" max="5" value="3" />
+      </div>
+
+      <button type="submit">Ajouter le joueur</button>
+    </form>
+
+    <p class="info-text">
+      Le niveau global est une estimation de la contribution globale du joueur (technique, physique,
+      tactique, mental) sur 5. Il est utilisé par l'IA pour adapter les séances.
+    </p>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <small>&copy; Coach IA Volley – Gestion des joueurs</small>
+</footer>
+
+<script src="../js/players.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coach IA Volley – Équipes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="app-header">
+  <h1>Coach IA Volley</h1>
+  <nav class="top-nav">
+    <a href="index.html">🏠 Accueil</a>
+    <span> / </span>
+    <span>Équipes</span>
+    <button type="button" id="logout-btn" class="btn-link nav-right">
+      Se déconnecter
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Résumé du coach connecté -->
+  <section class="card">
+    <h2>Coach connecté</h2>
+    <p id="coach-summary">
+      Coach : <span id="coach-name-display">Non connecté</span>
+    </p>
+  </section>
+
+  <!-- Liste des équipes -->
+  <section class="card">
+    <h2>Mes équipes</h2>
+    <div id="teams-list">
+      <!-- Cartes équipes générées par teams.js -->
+      <!--
+      <div class="team-item">
+        <h3>U17 Filles</h3>
+        <p>Catégorie : U17F – Niveau : Régional</p>
+        <div class="card-actions">
+          <a href="players.html?teamId=1" class="btn">Gérer les joueurs</a>
+          <a href="training.html?teamId=1" class="btn">📋 Planifier une séance</a>
+        </div>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- Création d'une équipe -->
+  <section class="card">
+    <h2>Créer une nouvelle équipe</h2>
+    <form id="create-team-form">
+      <div class="form-group">
+        <label for="team-name">Nom de l'équipe</label>
+        <input type="text" id="team-name" name="team-name"
+               placeholder="U17 Filles" required />
+      </div>
+
+      <div class="form-group">
+        <label for="team-category">Catégorie</label>
+        <input type="text" id="team-category" name="team-category"
+               placeholder="U17F, Sénior M, etc." />
+      </div>
+
+      <div class="form-group">
+        <label for="team-level">Niveau de compétition</label>
+        <input type="text" id="team-level" name="team-level"
+               placeholder="Départemental, Régional, National..." />
+      </div>
+
+      <button type="submit">Ajouter l'équipe</button>
+    </form>
+
+    <p class="info-text">
+      Cette équipe sera liée à votre compte coach. Vous pourrez ensuite lui associer des joueurs
+      et générer des séances d'entraînement.
+    </p>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <small>&copy; Coach IA Volley – Gestion des équipes</small>
+</footer>
+
+<script src="../js/teams.js"></script>
+</body>
+</html>

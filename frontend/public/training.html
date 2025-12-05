@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coach IA Volley – Séance d'entraînement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="app-header">
+  <h1>Coach IA Volley</h1>
+  <nav class="top-nav">
+    <a href="index.html">🏠 Accueil</a>
+    <span> / </span>
+    <a href="teams.html">Équipes</a>
+    <span> / </span>
+    <span>Séance d'entraînement</span>
+    <button type="button" id="logout-btn" class="btn-link nav-right">
+      Se déconnecter
+    </button>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- Informations sur l'équipe -->
+  <section class="card">
+    <h2>Équipe</h2>
+    <p id="team-info-training">
+      <!-- Exemple : "U17 Filles – Catégorie U17F – Niveau : Régional" -->
+    </p>
+    <a href="teams.html" class="btn-link">⬅ Retour aux équipes</a>
+  </section>
+
+  <!-- Paramètres de la séance -->
+  <section class="card">
+    <h2>Paramètres de la séance</h2>
+    <form id="training-form">
+      <div class="form-group">
+        <label for="training-duration">Durée totale (minutes)</label>
+        <input type="number" id="training-duration" name="training-duration"
+               value="90" min="30" max="180" step="15" />
+      </div>
+
+      <div class="form-group">
+        <label for="training-goal">Objectif principal</label>
+        <select id="training-goal" name="training-goal">
+          <option value="reception">Réception</option>
+          <option value="attaque">Attaque</option>
+          <option value="physique">Physique</option>
+          <option value="recuperation">Récupération</option>
+          <!-- Plus tard : "auto" basé sur les stats de match -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="training-intensity">Intensité cible (1 à 5)</label>
+        <input type="number" id="training-intensity" name="training-intensity"
+               value="4" min="1" max="5" />
+      </div>
+
+      <button type="submit">Générer la séance</button>
+    </form>
+
+    <p class="info-text">
+      La séance sera construite automatiquement à partir du catalogue d'exercices,<br />
+      en répartissant la durée en : échauffement, bloc principal, transfert et retour au calme.
+    </p>
+  </section>
+
+  <!-- Historique des séances -->
+  <section class="card">
+    <h2>Historique des séances</h2>
+    <div id="training-history">
+      <!-- Historique rempli par training.js -->
+    </div>
+  </section>
+
+  <!-- Séance générée -->
+  <section class="card">
+    <h2>Séance générée</h2>
+
+    <button type="button" id="print-btn" class="btn" style="margin-bottom: 0.5rem;">
+      📄 Exporter en PDF / Imprimer
+    </button>
+
+    <div id="training-summary">
+      <!-- Résumé de la séance : objectif, durée, date -->
+    </div>
+
+    <div id="training-blocks">
+      <!-- Blocs détaillés : échauffement, principal, transfert, retour au calme -->
+      <!-- Chaque bloc contiendra des lignes avec durée modifiable et exercice -->
+    </div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <small>&copy; Coach IA Volley – Planification de séances</small>
+</footer>
+
+<script src="../js/training.js"></script>
+</body>
+</html>
+ 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coach IA Volley – Connexion coach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="app-header">
+  <h1>Coach IA Volley</h1>
+  <p class="subtitle">Assistant d'entraînement intelligent pour coachs de volley</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Connexion / Inscription coach</h2>
+
+    <form id="coach-form">
+      <div class="form-group">
+        <label for="coach-email">Email du coach</label>
+        <input type="email" id="coach-email" name="coach-email"
+               placeholder="coach@club.fr" required />
+      </div>
+
+      <div class="form-group">
+        <label for="coach-name">Nom complet</label>
+        <input type="text" id="coach-name" name="coach-name"
+               placeholder="Prénom Nom" />
+      </div>
+
+      <div class="form-group">
+        <label for="coach-password">Mot de passe</label>
+        <input type="password" id="coach-password" name="coach-password"
+               required />
+      </div>
+
+      <div class="form-group form-actions">
+        <button type="button" id="coach-register-btn">S'inscrire</button>
+        <button type="button" id="coach-login-btn">Se connecter</button>
+      </div>
+    </form>
+
+    <p class="info-text">
+      👉 <strong>S'inscrire</strong> crée un compte coach dans la base MySQL (mot de passe hashé).<br>
+      👉 <strong>Se connecter</strong> vérifie vos identifiants et vous redirige vers la gestion des équipes.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>À propos de l'application</h2>
+    <p>
+      Coach IA Volley vous aide à :
+    </p>
+    <ul>
+      <li>Gérer vos équipes et vos joueurs</li>
+      <li>Générer automatiquement des séances d'entraînement adaptées</li>
+      <li>Garder un historique des séances et de la charge</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <small>&copy; Coach IA Volley – Prototype</small>
+</footer>
+
+<script src="../js/index.js"></script>
+</body>
+</html>
